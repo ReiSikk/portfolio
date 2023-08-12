@@ -2,7 +2,13 @@
 @import "utils/global-variables";
 // fonts
 @import "utils/fonts";
+//base styling
+@import "base/basic-styling";
 // home page style
 @import "pages/home-page";
 // about page style
 @import "utils/satoshi-font";
+//nav bar styling
+@import "components/nav-styling";
+//burger menu 
+@import "components/burger-menu";

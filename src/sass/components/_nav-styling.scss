@@ -1,0 +1,15 @@
+
+.nav-wrapper {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2.5rem 2rem 0rem 2rem;
+}
+.nav-buttons-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.25rem;
+}
