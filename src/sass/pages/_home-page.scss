@@ -1,3 +1,111 @@
 h1 {
     font-family: $h1-font;
 }
+.hero-media {
+    margin-left: auto;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    img {
+        width: 100%;
+        height: auto;
+        max-width: fit-content;
+        margin-top: -10%;
+    }
+}
+.hero-wrapper {
+    padding-top: 3.5rem;
+}
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 7.5rem 0rem 2.5rem 0rem;
+    border-bottom: $border;
+    .info-left {
+        max-width: 66ch;
+    }
+    .info-right {
+        min-width: 33vw;
+        a {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          transition: all 0.33s ease;
+        }
+        a:hover {
+            gap: 1rem;
+        }
+        span {
+            max-height: 48px;
+        }
+    }
+    .hero-socials {
+       display: flex;
+       gap: 1.5rem;
+       margin-right: auto;
+       padding-top: 1rem;
+    }
+}
+
+
+.hover-den:hover {
+    cursor: url(../media/denmark.png)12.5 12.5, auto;
+}
+.link  {
+    list-style: none;
+    transition: all 0.2s ease;
+  }
+  .link:hover {
+    transform: scale(1.05);
+  }
+  .link:active {
+    transform: scale(0.95);
+  }
+  
+
+  .information-section {
+    padding: 5rem 0rem;
+  }
+  .info-section-upper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem 0rem;
+    gap: 2rem;
+    .info-section-upper-right {
+        max-width: 66ch;
+    }
+    .info-section-upper-left {
+        max-width: 66ch;
+        padding-right: 1.5rem;
+    }
+  }
+  @media only screen and (min-width:580px) {
+    .hero-info {
+        flex-direction: row;
+        .info-right {
+            padding-left: 2.5rem;   
+            border-left: $border;
+        }
+    }
+    .info-section-upper {
+        flex-direction: row;
+        border-bottom: $border;
+    }
+    .info-section-lower {
+        padding-top: 1.5rem;
+    }
+    .info-section-upper-right {
+        border-left: $border;
+        padding-left: 2.5rem; 
+    }
+  }
+  .info-section-lower {
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
