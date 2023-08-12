@@ -5,11 +5,24 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 2.5rem 2rem 0rem 2rem;
+    padding: 2.5rem 0rem;
+}
+@media only screen and (min-width:1080px) {
+    .nav-wrapper {
+        padding: 2.5rem 2rem;
+    }
 }
 .nav-buttons-wrap {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 1.25rem;
+}
+.hide-mobile {
+    display: none;
+}
+@media only screen and (min-width:480px) {
+    .hide-mobile {
+        display: block;
+    }
 }
