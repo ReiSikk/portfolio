@@ -7,11 +7,13 @@ function App() {
 
 
   return (
+    <>
    <div className="layout-wrapper">
     <NavBar />
     <HomePage />
-   <Footer />
    </div>
+   <Footer />
+   </>
   )
 }
 
