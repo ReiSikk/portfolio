@@ -146,11 +146,13 @@
   }
   .email-link {
     text-align: center;
-    transition: all 0.2s ease;
   }
   .email-link:active {
     transform: scale(0.95);
   }
   .email-link:hover {
     text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+    text-decoration-color: $skyblue;
   }

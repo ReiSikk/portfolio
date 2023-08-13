@@ -1,0 +1,37 @@
+footer {
+    background: $black;
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 3rem 1rem;
+    p,a {
+        color: $white;
+    }
+    .footer-upper {
+        padding: 2.5rem 0rem;
+    }
+    .border-footer {
+        border-bottom: 1.5px solid $skyblue;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100px;
+        width: 5vw;
+    }
+    .footer-lower {
+        padding-top: 1.5rem;
+    }
+    .copyright {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 3rem;
+        font-size: 0.875rem;
+    }
+    .footer-link:hover {
+        text-underline-position: below;
+        text-underline-offset: 3px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $skyblue;
+    }
+}
