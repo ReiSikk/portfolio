@@ -2,6 +2,8 @@
 import arrowRight from "../media/arrow-right.svg";
 import linkedinLogo from "../media/linkedin.svg";
 import githublogo from "../media/github.svg";
+import { Link } from "react-router-dom";
+
 
 
 function HomePage() {
@@ -25,7 +27,7 @@ function HomePage() {
                     <h4>Web Development BA student and aspiring web designer with a passion for UI design and frontend development.</h4>
                 </div>
                 <div className="info-right">
-                    <a href="#" className="h4-style">About me <span><img src={arrowRight} alt="arrow pointing right linking to about me page" /></span></a>
+                    <Link to="about" className="h4-style">About me <span><img src={arrowRight} alt="arrow pointing right linking to about me page" /></span></Link>
                     <div className="info-right-bottom">
                     <ul className="hero-socials">
                     <li className="linkedin-btn">
