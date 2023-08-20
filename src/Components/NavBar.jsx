@@ -10,7 +10,7 @@ function NavBar() {
         <nav>
             <ul className="nav-buttons-wrap">
                 <BurgerMenu />
-                    <li className="linkedin-btn hide-mobile">
+                    <li className="social-btn hide-mobile">
                         <a target='_blank'
             rel='noopener noreferrer' href="https://www.linkedin.com/in/rei-sikk-a642b9218/">
                 <img src={linkedinLogo} alt="LinkedIn" />

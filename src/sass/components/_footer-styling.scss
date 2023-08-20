@@ -11,6 +11,9 @@ footer {
     }
     .footer-upper {
         padding: 2.5rem 0rem;
+        p {
+            text-align: center;
+        }
     }
     .border-footer {
         border-bottom: 1.5px solid $skyblue;

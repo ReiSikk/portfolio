@@ -24,7 +24,7 @@
   ul{
     list-style: none;
   }
-  h1,h2,h3, h4 {
+  h1,h2,h3, h4, h5 {
     font-weight: bold;
     font-family: $h1-font;
   }
@@ -60,4 +60,15 @@
     padding: 1rem 3rem;
     max-width: 2000px;
     margin: 0 auto;
+  }
+//social media icons
+  .social-btn {
+    list-style: none;
+    transition: all 0.2s ease;
+  }
+  .social-btn:hover {
+    transform: scale(1.05);
+  }
+  .social-btn:active {
+    transform: scale(0.95);
   }
