@@ -44,6 +44,9 @@
         .about-left {
             max-width: 100vw;
             padding-top: 0.5rem;
+            h2 {
+                padding-top: 0.75rem;
+            }
          
         }
         .about-img {
@@ -53,6 +56,7 @@
         img {
             max-width: 100vw;
         }
+        
     }
 }
 .about-left {
@@ -109,18 +113,51 @@
   //contact buttons
   .about-contact {
     margin-top: 5rem;
+    h3 {
+        text-align: center;
+    }
   }
   .contact-wrapper {
-    padding: 3.5rem 0rem 2.5rem 0rem;
+    padding: 2rem 0rem 2.5rem 0rem;
   }
   .contact-item {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 0rem 1rem 0rem;
+    padding: 2rem 0rem 1rem 0rem;
   }
   .item-left {
     padding-bottom: 0.85rem;
     border-bottom: $border;
   }
+@media only screen and (max-width:680px) {
+    .contact-item:first-of-type {
+        padding: 0rem 0rem 2.5rem 0rem;
+    }
+    .item-right {
+        min-width: 250px;
+        max-width: 250px;
+    }
+    .contact-item {
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 2.5rem 0rem;
+        border-bottom: $border;
+        .item-left {
+            border-bottom: none;
+        }
+        h4,h5 {
+            text-align: center;
+        }
+        h4 {
+            padding-bottom: 0.75rem;
+        }
+    }
+}
+@media only screen and (max-width: 380px) {
+    .item-right {
+        min-width: 150px;
+        max-width: 240px;
+    }
+}

@@ -20,7 +20,7 @@ function AboutPage() {
       In the summer of 2021, after completing military service in my home country of Estonia I moved to Copenhagen to realize my goal of living abroad and pursue my passion for design and tech by studying Multimedia Design at KEA. I’ve long been interested in design and what makes design good, but during my studies I realised I am also captivated about the technical side of bringing designs into life with code. Coding is something that is very challenging and frustrating at times but the sense of accomplishment and joy you get when solving problems is so rewarding and motivating. I find that in this field the possibilities are endless and I’m motivated by the thought that good design and technological solutions can improve the lives of so many people. 
       </p>
       <section className="about-contact">
-        <h3>Get in touch</h3>
+        <h3 className='h2-style'>Get in touch</h3>
         <div className="contact-wrapper">
           <div className="contact-item">
              <div className="item-left">
