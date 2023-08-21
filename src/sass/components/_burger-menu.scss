@@ -83,30 +83,14 @@
     font-size: 2rem;
     font-family: $h1-font;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: all 0.2s;
   }
 
 
   .burger-link:hover {
      cursor: pointer;
-  }
-  .burger-link::before {
-    margin-left: auto;
-  }
-  
-  .burger-link::after, .burger-link::before {
-    content: '';
-    width: 0%;
-    height: 4px;
-    background: $black;
-    display: block;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .burger-link:hover::after, .burger-link:hover::before {
-    width: 100%;
-  }
-  
+     padding-left: 0.5rem;
+  }  
   .show {
     transform: translateX(0);
   }
