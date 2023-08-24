@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import linkedinLogo from "../media/linkedIn.svg";
 import githublogo from "../media/github.svg";
+import { Link } from 'react-router-dom';
 
 const BurgerMenu = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -22,9 +23,9 @@ const BurgerMenu = () => {
                 </div>
             <div className="burger-links">
                 <ul>
-                    <li className='burger-link'>Home</li>
-                    <li className='burger-link'>About</li>
-                    <li className='burger-link'>Projects</li>
+                    <Link to="/" className='burger-link' onClick={handleMenuToggle}>Home</Link>
+                    <Link to="about" className='burger-link' onClick={handleMenuToggle}>About</Link>
+                    <Link to="projects" className='burger-link' onClick={handleMenuToggle}>Projects</Link>
                 </ul>
             </div>
             <div className="menu-bottom">
