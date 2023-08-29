@@ -77,6 +77,14 @@ label {
     width: auto;
     aspect-ratio: 1/1;
 }
+#project_vid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+#project_img {
+    border-radius: 8px;
+}
 
 @media only screen and (max-width: 899px) {
     .img-right, .img-left {
@@ -97,6 +105,9 @@ label {
         a:hover {
             background: none;
             text-decoration: none;
+        }
+        a:active {
+            transform: scale(0.9);
         }
     }
 }
