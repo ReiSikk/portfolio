@@ -89,3 +89,14 @@ label {
         }
     }
 }
+@media only screen and (max-width:480px) {
+    .article-links {
+        a {
+            padding: 0rem;
+        }
+        a:hover {
+            background: none;
+            text-decoration: none;
+        }
+    }
+}
