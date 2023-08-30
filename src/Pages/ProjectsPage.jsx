@@ -3,6 +3,7 @@ import arrow from '../media/arrowup.svg'
 import hogwarts from '../media/hogwartsmock.webp'
 import cphstays from '../media/cphstays.webp'
 import foofest from '../media/foofest-mock.webp'
+import portfolio from '../media/portfolio1.webp'
 
 
 function ProjectsPage() {
@@ -45,7 +46,7 @@ function ProjectsPage() {
                             <label className='label'>School project</label>
                            </div>
                            <p className="project-desc">
-                           A 4th semester final exam project in collaboration with CPHStays, which is a newly established branch of ManageMyAir, a rental property management company in Copenhagen. The proposed solution, done in collaboration with a fellow student, is a functional and interactive website that serves as a platform for users to search and book apartments, while also providing comprehensive information about CPHStays&apos; services and benefits. The website showcases my ability to handle complexity in terms of functionality, design - demonstrating my proficiency as multimedia designer and developer. To display the portfolio of apartments that CPH Stays offers, we used Wordpress as the CMS and it’s REST API and Pods plugin to create a database of apartments. 
+                           A 4th semester final exam project in collaboration with CPHStays, which is a newly established branch of ManageMyAir, a rental property management company in Copenhagen. The proposed solution, done in collaboration with a fellow student, is a functional and interactive website that serves as a platform for users to search and book apartments, while also providing comprehensive information about CPHStays&apos; services and benefits. As I was responsible for the website development it showcases my ability to handle complexity in terms of functionality, design - demonstrating my proficiency as multimedia designer and developer. To display the portfolio of apartments that CPH Stays offers, we used Wordpress as the CMS and it’s REST API and Pods plugin to create a database of apartments. 
                            </p>
                            <div className="tech-stack">
                             <p><span className='condensed'>Tech Stack:</span>  Html | CSS | JavaScript | Wordpress | REST API | React | Next.js</p>
@@ -74,6 +75,27 @@ function ProjectsPage() {
                            <div className="article-links">
                                 <a href="https://cosmic-twilight-40378f.netlify.app/" target='_blank' rel='noreferrer'>Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                                 <a href="https://github.com/ReiSikk/FooFestival-app-v2-Rei" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
+                           </div>
+                        </div>
+                    </article>
+                    <article  className="img-left">
+                        <a className="article-left" href='https://reisikk.dk/portfolio/' target='_blank' rel='noreferrer'>
+                            <img src={portfolio} alt="mockup of the browser result" id='project_img' />
+                        </a>
+                        <div className="article-info">
+                           <h3 className="project-title">Personal Portfolio website</h3>
+                           <div className="labels-cont">
+                            <label className='label'>Personal project</label>
+                           </div>
+                           <p className="project-desc">
+                           A project built entirely by me to showcase my skills as a multimedia designer and developer. I used this portfolio website to apply to internship positions in the winter of 2022/23. In this project I used the MotionOne animations library to create the animations and add a bit of flair to the website.
+                           </p>
+                           <div className="tech-stack">
+                            <p><span className='condensed'>Tech Stack:</span>  Html | CSS | JavaScript | MotionOne </p>
+                           </div>
+                           <div className="article-links">
+                                <a href="https://reisikk.dk/portfolio/" target='_blank' rel='noreferrer'>Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
+                                <a href="https://github.com/ReiSikk/portfolioSite" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                            </div>
                         </div>
                     </article>
