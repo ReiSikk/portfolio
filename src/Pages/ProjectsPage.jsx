@@ -2,6 +2,7 @@
 import arrow from '../media/arrowup.svg'
 import hogwartsvideo from '../media/hogwarts.mp4'
 import cphstays from '../media/cphstays.webp'
+import foofest from '../media/foofest-mock.webp'
 
 
 function ProjectsPage() {
@@ -59,6 +60,27 @@ function ProjectsPage() {
                            <div className="article-links">
                                 <a href="https://cphstays-web-exam.vercel.app/" target='_blank' rel='noreferrer'>Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                                 <a href="https://github.com/ReiSikk/cphstays-web-exam" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
+                           </div>
+                        </div>
+                    </article>
+                    <article  className="img-right">
+                        <div className="article-right">
+                        <img src={foofest} alt="mockup of the browser result" id='project_img' />
+                        </div>
+                        <div className="article-left">
+                           <h3 className="project-title">Festival companion app</h3>
+                           <div className="labels-cont">
+                            <label className='label'>School project</label>
+                           </div>
+                           <p className="project-desc">
+                           This was an an exam assignment for the 3rd semester Frontend Design elective and the task was to create a booking site and a companion app for a fictional festival. This website is meant to act as a companion app for people with a ticket. The website provides more in-depth information about things like the festival schedule and bands currently playing live. The website is built with React and uses the React Router to navigate between pages. This project was done in a a team of 2 people. Among other tasks, I contributed most to the design of the website and the feature which displays the current band playing live. This was the first bigger project where I worked with React. 
+                           </p>
+                           <div className="tech-stack">
+                            <p><span className='h5-style'>Tech Stack:</span>  Html | CSS | React | Sass</p>
+                           </div>
+                           <div className="article-links">
+                                <a href="https://cosmic-twilight-40378f.netlify.app/" target='_blank' rel='noreferrer'>Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
+                                <a href="https://github.com/ReiSikk/FooFestival-app-v2-Rei" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                            </div>
                         </div>
                     </article>
