@@ -89,6 +89,13 @@ label {
 #project_img {
     border-radius: 8px;
 }
+#project_img:hover, #project_vid:hover {
+    cursor: url(../media/hovercursor.png) 50 50,auto;
+} 
+.condensed {
+    font-weight: 600;
+    text-transform: uppercase;
+}
 
 @media only screen and (max-width: 899px) {
     .img-right, .img-left {
