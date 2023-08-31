@@ -2,6 +2,7 @@
 import arrowRight from "../media/arrow-right.svg";
 import linkedinLogo from "../media/linkedin.svg";
 import githublogo from "../media/github.svg";
+import arrowright from "../media/arrow-right.svg";
 import { Link } from "react-router-dom";
 
 
@@ -67,6 +68,7 @@ function HomePage() {
     </main>
     <div className="cta">
                 <Link to="projects" className="view-projects">View my projects</Link>
+                <span><img src={arrowright} alt="arrow" /></span>
             </div>
 
     </>
