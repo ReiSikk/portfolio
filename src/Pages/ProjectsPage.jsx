@@ -4,9 +4,17 @@ import hogwarts from '../media/hogwartsmock.webp'
 import cphstays from '../media/cphstays.webp'
 import foofest from '../media/foofest-mock.webp'
 import portfolio from '../media/portfolio1.webp'
+import { motion } from "framer-motion"
+import { useInView } from "framer-motion"
+import { useRef, useEffect } from "react"
 
 
 function ProjectsPage() {
+    const ref = useRef(null)
+    const isInView = useInView(ref)
+    useEffect(() => {
+        console.log("Element is in view: ", isInView)
+      }, [isInView])
   return (
     <>
     <header>
@@ -15,6 +23,7 @@ function ProjectsPage() {
     </header>
     <main>
         <section className="projects-grid">
+      
                     <article  className="img-right">
                     <a href="http://reisikk.dk/Hacked_Hogwarts_Student_List/" target='_blank' rel='noreferrer' className='article-right'>
                         <img src={hogwarts} alt="mockup of the browser result" id='project_img' />
@@ -36,7 +45,12 @@ function ProjectsPage() {
                            </div>
                         </div>
                     </article>
+                    <motion.div 
+            className="project-container"
+            ref={ref}
+            >
                     <article  className="img-left">
+
                         <a className="article-left" href='https://cphstays-web-exam.vercel.app/' target='_blank' rel='noreferrer'>
                             <img src={cphstays} alt="mockup of the browser result" id='project_img' />
                         </a>
@@ -57,6 +71,7 @@ function ProjectsPage() {
                            </div>
                         </div>
                     </article>
+                    </motion.div>
                     <article  className="img-right">
                         <a className="article-right" href="https://cosmic-twilight-40378f.netlify.app/" target='_blank' rel='noreferrer'>
                         <img src={foofest} alt="mockup of the browser result" id='project_img' />
