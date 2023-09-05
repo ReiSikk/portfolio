@@ -16,9 +16,6 @@ function HomePage() {
                 <h2 className="h3-style">Web Designer/ Developer</h2> 
                 <h5>Based in <span className="hover-den">Copenhagen, Denmark</span></h5>
             </div>
-           {/*  <div className="hero-media">
-                <img src={reiPhoto} alt="illustration of Rei, the author of the portfolio website" />
-            </div> */}
         </div>
     </header>
     <main>
