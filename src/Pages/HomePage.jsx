@@ -13,12 +13,9 @@ function HomePage() {
         <div className="hero-wrapper">
             <div className="hero-text">
                 <h1>Rei Sikk</h1>
-                <h2 className="h1-style">Web Designer/ Developer</h2> 
+                <h2 className="h3-style">Web Designer/ Developer</h2> 
                 <h5>Based in <span className="hover-den">Copenhagen, Denmark</span></h5>
             </div>
-           {/*  <div className="hero-media">
-                <img src={reiPhoto} alt="illustration of Rei, the author of the portfolio website" />
-            </div> */}
         </div>
     </header>
     <main>
@@ -65,6 +62,10 @@ function HomePage() {
                 </div>
             </section>
     </main>
+    <div className="cta">
+                <Link to="projects" className="view-projects">View my projects</Link>
+                
+            </div>
 
     </>
   )
