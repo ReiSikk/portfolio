@@ -7,6 +7,11 @@
     justify-content: space-between;
     padding: 2.5rem 1.25rem;
 }
+.active-link {
+    border: 1.5px solid $black;
+    border-radius: 1000px;
+  }
+  
 @media only screen and (min-width:1080px) {
     .nav-wrapper {
         padding: 2.5rem 2rem;
@@ -16,7 +21,22 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1.25rem;
+    align-items: center;
+    gap: 1.3rem;
+
+    li {
+        padding:0.35rem 0.7rem;
+        border-radius: 100px;
+        transition: all 0.15s ease;
+        a {
+            font-size: 1.3rem;
+        }
+        
+    }
+    li:active {
+        background: $black;
+        color: $white;
+    }
 }
 .hide-mobile {
     display: none;

@@ -1,25 +1,44 @@
 
 import linkedinLogo from "../media/linkedIn.svg";
-import BurgerMenu from "./BurgerMenu";
-import { Link } from "react-router-dom";
 import logo from "../media/logo.svg"
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
-   /*  const handleLinkedIn = () => {
-        window.location.replace('https://linkedin.com');
-      }; */
+const [activePage, setActivePage] = useState("Home");
+
+function handleClick(e) {
+    setActivePage(e.target.innerText);
+}
+
+
   return (
     <div className="nav">
         <nav className="nav-wrapper">
-            <Link to="/" className="logo"><img src={logo} alt="link to homepage" title="Home"/></Link>
+            <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home"/></NavLink>
             <ul className="nav-buttons-wrap">
-                <BurgerMenu />
+                <li className={activePage === 'Home' ? 'active-link' : 'nav-link'}>
+                <NavLink to="/" className="nav-link" onClick={handleClick}>
+                    Home
+                </NavLink>
+                </li>
+                <li className={activePage === 'Projects' ? 'active-link' : 'nav-link'}>
+                <NavLink to="projects" className="nav-link" onClick={handleClick}>
+                    Projects
+                </NavLink>
+                </li>
+                <li className={activePage === 'About' ? 'active-link' : 'nav-link'}>
+                <NavLink to="about" className="nav-link" onClick={handleClick}>
+                    About
+                </NavLink>
+                </li>
+              
+                {/* <BurgerMenu /> */}
                     <li className="social-btn hide-mobile">
-                        <a target='_blank'
-            rel='noopener noreferrer' href="https://www.linkedin.com/in/rei-sikk-a642b9218/">
-                <img src={linkedinLogo} alt="LinkedIn" />
-            </a>
-                    </li>
+                        <a target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/rei-sikk-a642b9218/">
+                          <img src={linkedinLogo} alt="LinkedIn" />
+                       </a>
+                </li>
             </ul>
         </nav>
     </div>
