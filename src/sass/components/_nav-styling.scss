@@ -41,8 +41,16 @@
 .hide-mobile {
     display: none;
 }
+.hide-links {
+    display: none;
+}
+@media only screen and (min-width:768px) {
+    .hide-links {
+        display: flex;
+    }
+}
 @media only screen and (min-width:480px) {
     .hide-mobile {
-        display: block;
+        display: flex;
     }
 }

@@ -3,6 +3,7 @@ import linkedinLogo from "../media/linkedIn.svg";
 import logo from "../media/logo.svg"
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import BurgerMenu from "./BurgerMenu";
 
 function NavBar() {
 const [activePage, setActivePage] = useState("Home");
@@ -16,7 +17,8 @@ function handleClick(e) {
     <div className="nav">
         <nav className="nav-wrapper">
             <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home"/></NavLink>
-            <ul className="nav-buttons-wrap">
+            <div className="nav-right">
+            <ul className="nav-buttons-wrap hide-links">
                 <li className={activePage === 'Home' ? 'active-link' : 'nav-link'}>
                 <NavLink to="/" className="nav-link" onClick={handleClick}>
                     Home
@@ -32,14 +34,15 @@ function handleClick(e) {
                     About
                 </NavLink>
                 </li>
-              
-                {/* <BurgerMenu /> */}
                     <li className="social-btn hide-mobile">
                         <a target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/rei-sikk-a642b9218/">
                           <img src={linkedinLogo} alt="LinkedIn" />
                        </a>
-                </li>
+                   </li>
             </ul>
+              
+                <BurgerMenu />
+                </div>
         </nav>
     </div>
   )
