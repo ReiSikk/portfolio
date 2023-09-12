@@ -7,10 +7,7 @@
     justify-content: space-between;
     padding: 2.5rem 1.25rem;
 }
-.active-link {
-    border: 1.5px solid $black;
-    border-radius: 1000px;
-  }
+
   
 @media only screen and (min-width:1080px) {
     .nav-wrapper {
@@ -28,12 +25,13 @@
         padding:0.35rem 0.7rem;
         border-radius: 100px;
         transition: all 0.15s ease;
+        border: solid 1.5px transparent;
         a {
             font-size: 1.125rem;
         }
         
     }
-    li:active {
+    li:active:not(:last-child) {
         background: $black;
         color: $white;
     }
@@ -43,6 +41,16 @@
 }
 .hide-links {
     display: none;
+}
+.active-link {
+    border: 1.5px solid $black !important;
+    border-radius: 200px;
+  }
+
+.logo {
+    img {
+        border-radius: 4px;
+    }
 }
 @media only screen and (min-width:768px) {
     .hide-links {
