@@ -11,7 +11,7 @@ const BurgerMenu = () => {
   }
 
   return (
-    <div className="burger-menu-container">
+    <div className="burger-menu-container hide-desktop">
       <li className={`menu-btn ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
         Menu
       </li>

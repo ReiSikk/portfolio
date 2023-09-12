@@ -7,6 +7,8 @@
     justify-content: space-between;
     padding: 2.5rem 1.25rem;
 }
+
+  
 @media only screen and (min-width:1080px) {
     .nav-wrapper {
         padding: 2.5rem 2rem;
@@ -16,13 +18,47 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 1.25rem;
+    align-items: center;
+    gap: 1.3rem;
+
+    li {
+        padding:0.35rem 0.7rem;
+        border-radius: 100px;
+        transition: all 0.15s ease;
+        border: solid 1.5px transparent;
+        a {
+            font-size: 1.125rem;
+        }
+        
+    }
+    li:active:not(:last-child) {
+        background: $black;
+        color: $white;
+    }
 }
 .hide-mobile {
     display: none;
 }
+.hide-links {
+    display: none;
+}
+.active-link {
+    border: 1.5px solid $black !important;
+    border-radius: 200px;
+  }
+
+.logo {
+    img {
+        border-radius: 4px;
+    }
+}
+@media only screen and (min-width:768px) {
+    .hide-links {
+        display: flex;
+    }
+}
 @media only screen and (min-width:480px) {
     .hide-mobile {
-        display: block;
+        display: flex;
     }
 }

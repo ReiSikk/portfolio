@@ -14,7 +14,7 @@ function HomePage() {
             <div className="hero-text">
                 <h1>Rei Sikk</h1>
                 <h2 className="h3-style">Web Designer/ Developer</h2> 
-                <h5>Based in <span className="hover-den">Copenhagen, Denmark</span></h5>
+                <h5>- Based in <span className="hover-den">Copenhagen, Denmark</span></h5>
             </div>
         </div>
     </header>

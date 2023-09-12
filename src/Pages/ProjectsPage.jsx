@@ -9,7 +9,7 @@ import portfolio from '../media/portfolio1.webp'
 function ProjectsPage() {
   return (
     <>
-    <header>
+    <header className='projects-header'>
         <h1>Projects</h1>
         <h2 className="h4-style">UI / UX / Web Development</h2>
     </header>
