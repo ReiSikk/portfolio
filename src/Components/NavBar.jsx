@@ -1,20 +1,46 @@
 
 import linkedinLogo from "../media/linkedIn.svg";
 import logo from "../media/logo.svg"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 
 function NavBar() {
 const [activePage, setActivePage] = useState("Home");
+//nav bar hide on scroll
+const [isVisible, setIsVisible] = useState(true);
+const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      setIsVisible(true); // User is scrolling up, show the navbar
+    } else {
+      setIsVisible(false); // User is scrolling down, hide the navbar
+    }
+
+    setPrevScrollPos(currentScrollPos);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, [prevScrollPos]);
+
 
 function handleClick(e) {
     setActivePage(e.target.innerText);
 }
 
 
+
+
   return (
-    <div className="nav">
+    <div className={`nav ${isVisible ? 'show' : ''}`}>
         <nav className="nav-wrapper">
             <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home"/></NavLink>
             <div className="nav-right">
