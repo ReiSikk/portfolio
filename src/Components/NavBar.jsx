@@ -8,28 +8,31 @@ import BurgerMenu from "./BurgerMenu";
 function NavBar() {
 const [activePage, setActivePage] = useState("Home");
 //nav bar hide on scroll
-const [isVisible, setIsVisible] = useState(true);
-const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
 
-useEffect(() => {
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
 
-    if (prevScrollPos > currentScrollPos) {
-      setIsVisible(true); // User is scrolling up, show the navbar
-    } else {
-      setIsVisible(false); // User is scrolling down, hide the navbar
-    }
+      // Add a window size check here
+      if (window.innerWidth > 768) {
+        if (prevScrollPos > currentScrollPos) {
+          setIsVisible(true); // User is scrolling up, show the navbar
+        } else {
+          setIsVisible(false); // User is scrolling down, hide the navbar
+        }
+      }
 
-    setPrevScrollPos(currentScrollPos);
-  };
+      setPrevScrollPos(currentScrollPos);
+    };
 
-  window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, [prevScrollPos]);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [prevScrollPos]);
 
 
 function handleClick(e) {

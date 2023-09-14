@@ -47,9 +47,10 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     transition: all 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.2);
+    /* background-color: rgba(0, 0, 0, 0.2); */
+    background-color: #F5F3EF;
     z-index: 0;
   }
   
@@ -59,8 +60,9 @@
     right: 0;
     height: 100%;
     width: 100vw;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    background-color: $white;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
     z-index: 2;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -98,6 +100,7 @@
      padding-left: 0.5rem;
   }  
   .show {
+    opacity: 1;
     transform: translateX(0);
   }
   
