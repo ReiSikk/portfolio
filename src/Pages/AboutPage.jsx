@@ -27,8 +27,12 @@ function AboutPage() {
               <h4>Have a project or opportunity?</h4>
               <h5 className='h4-style'>Let’s chat.</h5>
              </div>
-              <div className="item-right">
+             {/*  <div className="item-right">
                 <a href="mailto:sikkrei@gmail.com" rel='norefferer noopener' className="big-btn">sikkrei@gmail.com</a>
+                <span><img src={buttonarrow} alt="arrow pointing right"/></span>
+              </div> */}
+                <div className="item-right">
+                <a href="mailto:sikkrei@gmail.com" rel='noreferrer' target='_blank' className="big-btn">Email me</a>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
               </div>
           </div>

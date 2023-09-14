@@ -77,20 +77,17 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: inherit;
     border-radius: 30px;
     cursor: pointer;  
     padding: 1.75rem 2.5rem;
     z-index: 1;
     transition: all 0.3s ease;
     border: 1.5px solid $black;
-    a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    gap: 0.5rem;
+  
     span {
-        padding-left: 0.5rem;
+        margin-left: 0.5rem;
         transition: all 0.3s ease;
         max-height: 48px;
         max-width: 48px;
@@ -101,7 +98,6 @@
     border: 1.5px solid transparent;
     color: $white;
     span {
-    padding-left: 1rem;
         img {
             filter: invert(1);
         }
@@ -138,7 +134,7 @@
     }
     .item-right {
         min-width: 250px;
-        max-width: 250px;
+        max-width: 280px;
     }
     .contact-item {
         flex-wrap: wrap;
@@ -159,6 +155,9 @@
 @media only screen and (max-width: 380px) {
     .item-right {
         min-width: 150px;
-        max-width: 240px;
+        max-width: 100%;
+        a {
+            font-size: 0.875rem;
+        }
     }
 }

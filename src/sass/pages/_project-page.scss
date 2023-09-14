@@ -140,6 +140,9 @@ label {
             max-width: 100%;
         }
     }
+    .article-left, .article-right, .article-info {
+        max-width: 100%;
+    }
 }
 @media only screen and (max-width:480px) {
     .article-links {
