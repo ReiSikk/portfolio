@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
         <div className="footer-upper">
-            <p>For any professional or personal inquiries you can reach me at: <span className="email-link"><a href="mailto:sikkrei@gmail.com">sikkrei@gmail.com</a></span></p>
+            <p>Feel free to reach out to me by email: <span className="email-link"><a href="mailto:sikkrei@gmail.com">sikkrei@gmail.com</a></span></p>
         </div>
             <div className="border-footer"></div>
         <div className="footer-lower">

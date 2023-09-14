@@ -9,16 +9,15 @@
     padding-bottom: 1rem;
     justify-content: space-between;
     border-bottom: $border;
-    div {
-        width: 50%;
-    }
+    
     img {
         height: auto;
         width: 100%;
         object-fit: cover;
-        max-width: 50vw;
+        max-width: 1250px;
     }
 }
+
 
 .img-right {
     flex-direction: row-reverse;
@@ -41,6 +40,9 @@ label {
 }
 .project-desc {
     padding: 0rem 0rem 1rem 0rem;
+}
+.article-left, .article-right, .article-info {
+    max-width: 49%;
 }
 
 .article-links {
@@ -84,7 +86,8 @@ label {
 }
 #project_img {
     border-radius: 8px;
-    transition: all 0.2s ease; /* Add a smooth transition effect */
+    transition: all 0.2s ease;
+    max-width: 1280px;
 }
 #project_img:hover, #project_vid:hover {
     cursor: url(../media/hovercursor.png) 50 50,auto;
@@ -136,6 +139,9 @@ label {
         img {
             max-width: 100%;
         }
+    }
+    .article-left, .article-right, .article-info {
+        max-width: 100%;
     }
 }
 @media only screen and (max-width:480px) {
