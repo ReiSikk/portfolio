@@ -8,6 +8,7 @@ const BurgerMenu = () => {
 
   const handleMenuToggle = () => {
     setMenuOpen((prevOpen) => !prevOpen);
+
   }
 
   return (
