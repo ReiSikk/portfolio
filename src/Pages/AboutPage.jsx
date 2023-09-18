@@ -27,34 +27,36 @@ function AboutPage() {
               <h4>Have a project or opportunity?</h4>
               <h5 className='h4-style'>Let’s chat.</h5>
              </div>
-             {/*  <div className="item-right">
-                <a href="mailto:sikkrei@gmail.com" rel='norefferer noopener' className="big-btn">sikkrei@gmail.com</a>
-                <span><img src={buttonarrow} alt="arrow pointing right"/></span>
-              </div> */}
+             <a href="mailto:sikkrei@gmail.com" rel='noreferrer' target='_blank'>
                 <div className="item-right">
                 <a href="mailto:sikkrei@gmail.com" rel='noreferrer' target='_blank' className="big-btn">Email me</a>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
               </div>
+              </a>
           </div>
           <div className="contact-item">
              <div className="item-left">
               <h4>Interested in my CV?</h4>
               <h5 className='h4-style'>Have a look.</h5>
              </div>
+             <a href="https://drive.google.com/file/d/1C0LNgyBQHgF86T_2ZqL9H8WKrYWRVuM4/view?usp=sharing" rel='noreferrer' target='_blank' className="big-btn">
               <div className="item-right">
                 <a href="https://drive.google.com/file/d/1C0LNgyBQHgF86T_2ZqL9H8WKrYWRVuM4/view?usp=sharing" rel='noreferrer' target='_blank' className="big-btn">Here is my CV</a>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
               </div>
+              </a>
           </div>
           <div className="contact-item">
              <div className="item-left">
               <h4>Want to take a look at my Github profile?</h4>
               <h5 className='h4-style'>Go ahead.</h5>
              </div>
+             <a href="https://github.com/ReiSikk" rel='noreferrer' target='_blank' className="big-btn">
               <div className="item-right">
                 <a href="https://github.com/ReiSikk" rel='noreferrer' target='_blank' className="big-btn">Github profile</a>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
               </div>
+              </a>
           </div>
         </div>
       </section>
