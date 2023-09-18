@@ -6,6 +6,10 @@
     display: block;
   }
 
+  .hide {
+    opacity: 0;
+  }
+
   
   .menu-btn {
 
@@ -53,13 +57,15 @@
   background-color: $white;
   z-index: 2;
   transform: translateX(100%);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; 
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   //
 }
 
 /* Apply the "show" class to open the menu */
 .menu-content.show {
   transform: translateX(0); 
+  opacity: 1;
 }
 
 /* CSS for .overlay */
@@ -71,13 +77,16 @@
   height: 100vh;
   background-color: $white; 
   z-index: 0;
-  opacity: 1; 
+  opacity: 0.5;
   pointer-events: none; 
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
-/* .overlay.active {
+.overlay.show {
   opacity: 1;
   pointer-events: auto; 
-} */
+  transform: translateX(0); 
+}
 
 
   
