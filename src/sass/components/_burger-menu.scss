@@ -5,6 +5,11 @@
   .hide-desktop {
     display: block;
   }
+
+  .hide {
+    opacity: 0;
+  }
+
   
   .menu-btn {
 
@@ -41,32 +46,50 @@
     border-bottom: 1px solid $grey;
   }
   
+
+ 
+.menu-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: $white;
+  z-index: 2;
+  transform: translateX(100%);
+  opacity: 0.8;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  //
+}
+
+/* Apply the "show" class to open the menu */
+.menu-content.show {
+  transform: translateX(0); 
+  opacity: 1;
+}
+
+/* CSS for .overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $white; 
+  z-index: 0;
+  opacity: 0.5;
+  pointer-events: none; 
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto; 
+  transform: translateX(0); 
+}
+
+
   
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    transition: all 0.3s ease;
-    /* background-color: rgba(0, 0, 0, 0.2); */
-    background-color: #F5F3EF;
-    z-index: 0;
-  }
-  
-  .menu-content {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 100vw;
-    opacity: 0;
-    background-color: $white;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    z-index: 2;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-  }
   @media only screen and (min-width: 768px) {
     .menu-content {
       width: 50vw;
@@ -99,10 +122,7 @@
      cursor: pointer;
      padding-left: 0.5rem;
   }  
-  .show {
-    opacity: 1;
-    transform: translateX(0);
-  }
+
   
   .menu-bottom-icons ul {
     display: flex;

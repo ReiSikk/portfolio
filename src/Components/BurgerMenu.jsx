@@ -8,6 +8,7 @@ const BurgerMenu = () => {
 
   const handleMenuToggle = () => {
     setMenuOpen((prevOpen) => !prevOpen);
+
   }
 
   return (
@@ -15,8 +16,8 @@ const BurgerMenu = () => {
       <li className={`menu-btn ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
         Menu
       </li>
-      {isMenuOpen && <div className="overlay" onClick={handleMenuToggle}></div>}
-      <div className={`menu-content ${isMenuOpen ? 'show' : ''}`}>
+      <div className={`overlay ${isMenuOpen ? 'show' : 'hide'}`}></div>
+      <div className={`menu-content ${isMenuOpen ? 'show' : 'hide'}`}>
         {/* Place your menu items or links here */}
                 <div className="close-btn-container">
                     <li className='menu-btn' onClick={handleMenuToggle}>Close</li>
