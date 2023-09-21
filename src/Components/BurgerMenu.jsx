@@ -20,13 +20,19 @@ const BurgerMenu = () => {
       <div className={`menu-content ${isMenuOpen ? 'show' : 'hide'}`}>
         {/* Place your menu items or links here */}
                 <div className="close-btn-container">
-                    <li className='menu-btn' onClick={handleMenuToggle}>Close</li>
+                    <button className='menu-btn' onClick={handleMenuToggle}>Close</button>
                 </div>
             <div className="burger-links">
                 <ul>
+                  <li>
                     <Link to="/" className='burger-link' onClick={handleMenuToggle}>Home</Link>
+                  </li>
+                  <li>
                     <Link to="about" className='burger-link' onClick={handleMenuToggle}>About</Link>
+                  </li>
+                  <li>
                     <Link to="projects" className='burger-link' onClick={handleMenuToggle}>Projects</Link>
+                  </li>
                 </ul>
             </div>
             <div className="menu-bottom">

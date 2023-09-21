@@ -45,7 +45,7 @@ function handleClick(e) {
   return (
     <div className={`nav ${isVisible ? 'show' : ''}`}>
         <nav className="nav-wrapper">
-            <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home"/></NavLink>
+            <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home" width={48} height={48}/></NavLink>
             <div className="nav-right">
             <ul className="nav-buttons-wrap hide-links">
                 <li className={activePage === 'Home' ? 'active-link' : 'nav-link'}>
