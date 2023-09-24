@@ -4,6 +4,7 @@ import logo from "../media/logo.svg"
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
+import { motion } from "framer-motion";
 
 function NavBar() {
 const [activePage, setActivePage] = useState("Home");
@@ -43,7 +44,12 @@ function handleClick(e) {
 
 
   return (
-    <div className={`nav ${isVisible ? 'show' : ''}`}>
+    <motion.div 
+    className={`nav ${isVisible ? 'show' : ''}`}
+    initial={{ y: -100 }}
+    animate={{ y: 0 }}
+    transition={{ duration: 0.3 }}
+    >
         <nav className="nav-wrapper">
             <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home" width={48} height={48}/></NavLink>
             <div className="nav-right">
@@ -73,7 +79,7 @@ function handleClick(e) {
                 <BurgerMenu />
                 </div>
         </nav>
-    </div>
+    </motion.div>
   )
 }
 
