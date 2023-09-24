@@ -4,6 +4,7 @@ import hogwarts from '../media/hogwartsmock.webp'
 import cphstays from '../media/cphstays.webp'
 import foofest from '../media/foofest-mock.webp'
 import portfolio from '../media/portfolio1.webp'
+import { motion } from "framer-motion"
 
 
 function ProjectsPage() {
@@ -15,7 +16,12 @@ function ProjectsPage() {
     </header>
     <main>
         <section className="projects-grid">
-                    <article  className="img-right">
+                    <motion.article
+                      className="img-right"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true, amount: 0.8 }}
+                      >
                     <a href="http://reisikk.dk/Hacked_Hogwarts_Student_List/" target='_blank' rel='noreferrer' className='article-right'>
                         <img src={hogwarts} alt="mockup of the browser result" id='project_img' />
                         </a>
@@ -41,8 +47,12 @@ function ProjectsPage() {
                                 <a href="https://github.com/ReiSikk/Hacked_Hogwarts_Student_List" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                            </div>
                         </div>
-                    </article>
-                    <article  className="img-left">
+                    </motion.article>
+                    <motion.article  
+                    className="img-left"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}>
                         <a className="article-left" href='https://cphstays-web-exam.vercel.app/' target='_blank' rel='noreferrer'>
                             <img src={cphstays} alt="mockup of the browser result" id='project_img' />
                         </a>
@@ -71,8 +81,13 @@ function ProjectsPage() {
                                 <a href="https://github.com/ReiSikk/cphstays-web-exam" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                            </div>
                         </div>
-                    </article>
-                    <article  className="img-right">
+                    </motion.article>
+                    <motion.article  
+                    className="img-right"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    >
                         <a className="article-right" href="https://cosmic-twilight-40378f.netlify.app/" target='_blank' rel='noreferrer'>
                         <img src={foofest} alt="mockup of the browser result" id='project_img' />
                         </a>
@@ -98,7 +113,7 @@ function ProjectsPage() {
                                 <a href="https://github.com/ReiSikk/FooFestival-app-v2-Rei" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                            </div>
                         </div>
-                    </article>
+                    </motion.article>
                     <article  className="img-left">
                         <a className="article-left" href='https://reisikk.dk/portfolio/' target='_blank' rel='noreferrer'>
                             <img src={portfolio} alt="mockup of the browser result" id='project_img' />

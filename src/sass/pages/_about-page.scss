@@ -92,6 +92,10 @@
         max-height: 48px;
         max-width: 48px;
     }
+    p {
+        font-family: "Satoshi-Bold", sans-serif;
+        font-weight: 500;
+    }
   }
   .item-right:hover {
     background-color: $black;
