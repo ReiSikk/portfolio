@@ -14,11 +14,12 @@ const [activePage, setActivePage] = useState("Home");
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
+      console.log(currentScrollPos);
+      const isScrolledToTop = scrollY === 0;
 
-      // Add a window size check here
       if (window.innerWidth > 768) {
-        if (prevScrollPos > currentScrollPos) {
+        if (prevScrollPos > currentScrollPos || isScrolledToTop) {
           setIsVisible(true); // User is scrolling up, show the navbar
         } else {
           setIsVisible(false); // User is scrolling down, hide the navbar
