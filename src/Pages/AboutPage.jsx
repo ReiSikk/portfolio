@@ -29,7 +29,7 @@ function AboutPage() {
              </div>
              <a href="mailto:sikkrei@gmail.com" rel='noreferrer' target='_blank'>
                 <div className="item-right">
-                <a href="mailto:sikkrei@gmail.com" rel='noreferrer' target='_blank' className="big-btn">Email me</a>
+                <p className="big-btn">Email me</p>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
               </div>
               </a>
@@ -41,7 +41,7 @@ function AboutPage() {
              </div>
              <a href="https://drive.google.com/file/d/1C0LNgyBQHgF86T_2ZqL9H8WKrYWRVuM4/view?usp=sharing" rel='noreferrer' target='_blank' className="big-btn">
               <div className="item-right">
-                <a href="https://drive.google.com/file/d/1C0LNgyBQHgF86T_2ZqL9H8WKrYWRVuM4/view?usp=sharing" rel='noreferrer' target='_blank' className="big-btn">Here is my CV</a>
+                <p className="big-btn">Here is my CV</p>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
               </div>
               </a>
@@ -53,7 +53,7 @@ function AboutPage() {
              </div>
              <a href="https://github.com/ReiSikk" rel='noreferrer' target='_blank' className="big-btn">
               <div className="item-right">
-                <a href="https://github.com/ReiSikk" rel='noreferrer' target='_blank' className="big-btn">Github profile</a>
+                <p className="big-btn">Github profile</p>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
               </div>
               </a>
