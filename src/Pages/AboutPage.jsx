@@ -39,7 +39,7 @@ function AboutPage() {
               <h4>Interested in my CV?</h4>
               <h5 className='h4-style'>Have a look.</h5>
              </div>
-             <a href="https://drive.google.com/file/d/1C0LNgyBQHgF86T_2ZqL9H8WKrYWRVuM4/view?usp=sharing" rel='noreferrer' target='_blank' className="big-btn">
+             <a href="https://drive.google.com/file/d/15Dy1-cenmJpTgnui7bMs5PeIa2-nm6Rf/view?usp=drive_link" rel='noreferrer' target='_blank' className="big-btn">
               <div className="item-right">
                 <p className="big-btn">Here is my CV</p>
                 <span><img src={buttonarrow} alt="arrow pointing right"/></span>
