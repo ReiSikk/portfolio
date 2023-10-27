@@ -5,9 +5,37 @@ import cphstays from '../media/cphstays.webp'
 import foofest from '../media/foofest-mock.webp'
 import portfolio from '../media/portfolio1.webp'
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react";
+import ProjectCard from '../Components/ProjectCard'
+
 
 
 function ProjectsPage() {
+
+  const [projects, setProjects] = useState(null);
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('https://reisikk.dk/portfolio-wp/wp-json/wp/v2/project?_embed?media');
+        const jsonData = await response.json();
+        setProjects(jsonData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+console.log(projects, "projects data");
+
+
+
+
+
+
   return (
     <>
     <header className='projects-header'>
@@ -16,7 +44,13 @@ function ProjectsPage() {
     </header>
     <main>
         <section className="projects-grid">
-                    <motion.article
+          {projects && (projects.map((project) => {
+            console.log(project, "project");
+            return <ProjectCard key={project.id} project={project} projectTitle={project.title.rendered} projectLabel={project.project_label} />
+          }))}
+
+
+             {/*        <motion.article
                       className="img-right"
                       initial={{ opacity: 0 }}
                       whileInView={{ opacity: 1 }}
@@ -114,7 +148,11 @@ function ProjectsPage() {
                            </div>
                         </div>
                     </motion.article>
-                    <article  className="img-left">
+                    <motion.article
+                    className="img-left"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}>
                         <a className="article-left" href='https://reisikk.dk/portfolio/' target='_blank' rel='noreferrer'>
                             <img src={portfolio} alt="mockup of the browser result" id='project_img' />
                         </a>
@@ -140,7 +178,7 @@ function ProjectsPage() {
                                 <a href="https://github.com/ReiSikk/portfolioSite" target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
                            </div>
                         </div>
-                    </article>
+                    </motion.article> */}
         </section>
     </main>
     </>

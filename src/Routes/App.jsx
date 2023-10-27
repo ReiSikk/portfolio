@@ -6,6 +6,7 @@ import AboutPage from "../Pages/AboutPage";
 import ProjectsPage from "../Pages/ProjectsPage";
 import "../sass/style.scss";
 
+
 function App() {
 
 

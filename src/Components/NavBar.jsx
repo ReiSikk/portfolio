@@ -15,7 +15,6 @@ const [activePage, setActivePage] = useState("Home");
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      console.log(currentScrollPos);
       const isScrolledToTop = scrollY === 0;
 
       if (window.innerWidth > 768) {
