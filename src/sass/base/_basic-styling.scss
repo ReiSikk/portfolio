@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+  
+  html {
+    background-color: $white;
+    color: $black;
+    font-size: 1em;
+    scroll-behavior: smooth;
+  }
+  body {
+    overflow-x: hidden;
+    overscroll-behavior: none;
+    scroll-snap-type: y mandatory;
+    font-family: $p-font;
+  }
+  p {
+    font-size: 1.1rem;
+    font-family: $p-font;
+    font-weight: 400;
+    max-width: 62ch;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
+  ul{
+    list-style: none;
+  }
+  li {
+    font-family: $p-font;
+  }
+  h1,h2,h3, h4, h5 {
+    font-weight: bold;
+    font-family: $h1-font;
+  }
+  h1 {
+    /* font-size: clamp(3rem, 2.5015rem + 2.454vw, 4.25rem); */
+    font-size: clamp(3rem, 1.675vw + 2.66rem, 4rem);
+    line-height: clamp(4.5rem, 1.173vw + 4.262rem, 5.2rem);
+  }
+  .h1-style {
+    /* font-size: clamp(3rem, 2.5015rem + 2.454vw, 4.25rem); */
+    font-size: clamp(3rem, 1.675vw + 2.66rem, 4rem);
+
+  }
+  h2 {
+    /* font-size: clamp(2.5rem, 1.9545rem + 1.8182vw, 3.25rem) */
+    font-size: clamp(1.85rem, 1.089vw + 1.629rem, 2.5rem);
+    line-height: clamp(2.775rem, 0.796vw + 2.613rem, 3.25rem);
+  }
+  .h2-style {
+   /*  font-size: clamp(2.5rem, 1.9545rem + 1.8182vw, 3.25rem) */
+    font-size: clamp(1.85rem, 1.089vw + 1.629rem, 2.5rem);
+    line-height: clamp(2.775rem, 0.796vw + 2.613rem, 3.25rem);
+  }
+  h3 {
+    /* font-size: clamp(2rem, 1.6364rem + 1.2121vw, 2.5rem); */
+    font-size: clamp(1.375rem, 0.628vw + 1.247rem, 1.75rem);
+    line-height: clamp(2.063rem, 0.356vw + 1.99rem, 2.275rem);
+  }
+  .h3-style {
+    /* font-size: clamp(2rem, 1.6364rem + 1.2121vw, 2.5rem); */
+    font-size: clamp(1.375rem, 0.628vw + 1.247rem, 1.75rem);
+    line-height: clamp(2.063rem, 0.356vw + 1.99rem, 2.275rem);
+  }
+  h4 {
+    /* font-size: clamp(1.5rem, 1.3182rem + 0.6061vw, 1.75rem) */
+    font-size: clamp(1.125rem, 0.628vw + 0.997rem, 1.5rem);
+    line-height: clamp(1.688rem, 0.44vw + 1.598rem, 1.95rem);
+  }
+  .h4-style {
+    /* font-size: clamp(1.5rem, 1.3182rem + 0.6061vw, 1.75rem) */
+    font-size: clamp(1.125rem, 0.628vw + 0.997rem, 1.5rem);
+    line-height: clamp(1.688rem, 0.44vw + 1.598rem, 1.95rem);
+  }
+  h5 {
+    font-size: clamp(0.875rem, 0.209vw + 0.832rem, 1rem);
+    line-height: clamp(1.3rem, -0.021vw + 1.317rem, 1.313rem);
+  }
+  .h5-style {
+    font-size: clamp(0.875rem, 0.209vw + 0.832rem, 1rem);
+    line-height: clamp(1.3rem, -0.021vw + 1.317rem, 1.313rem);
+  }
+   a {
+    font-family: $h1-font;
+    font-weight: 500;
+  }
+  .layout-wrapper {
+    padding: 1rem 3rem;
+    max-width: 1980px;
+    margin: 0 auto;
+  }
+//social media icons
+  .social-btn {
+    list-style: none;
+    transition: all 0.2s ease;
+  }
+  .social-btn:hover {
+    transform: scale(1.05);
+  }
+  .social-btn:active {
+    transform: scale(0.95);
+  }
