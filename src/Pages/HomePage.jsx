@@ -2,11 +2,12 @@
 import arrowRight from "../media/arrow-right.svg";
 import linkedinLogo from "../media/linkedin.svg";
 import githublogo from "../media/github.svg";
+import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 
 
 
-function HomePage() {
+function HomePage({activePage, handleClick}) {    
   return (
     <>
     <header>
@@ -24,7 +25,7 @@ function HomePage() {
                     <h4>Web Development BA student and aspiring web designer with a passion for UI design and frontend development.</h4>
                 </div>
                 <div className="info-right">
-                    <Link to="about" className="h4-style">About me <span><img src={arrowRight} className="big-arrow" width={48} height={48} alt="arrow pointing right linking to about me page" /></span></Link>
+                    <Link to="about" className="h4-style" id="About me" onClick={handleClick}>About me <span><img src={arrowRight} className="big-arrow" width={48} height={48} alt="arrow pointing right linking to about me page" /></span></Link>
                     <div className="info-right-bottom">
                     <ul className="hero-socials">
                     <li className="linkedin-btn">
@@ -63,7 +64,7 @@ function HomePage() {
             </section>
     </main>
     <div className="cta">
-                <Link to="projects" className="view-projects">View my projects</Link>     
+        <Link to="projects" className="view-projects" id="Projects" onClick={handleClick}>View my projects</Link>     
     </div>
 
     </>

@@ -11,9 +11,13 @@ import ProjectCard from '../Components/ProjectCard'
 
 
 function ProjectsPage() {
-
   const [projects, setProjects] = useState(null);
-  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -27,13 +31,6 @@ function ProjectsPage() {
 
     fetchData();
   }, []);
-
-
-console.log(projects, "projects data");
-
-
-
-
 
 
   return (
