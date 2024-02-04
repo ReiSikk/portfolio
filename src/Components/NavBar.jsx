@@ -6,8 +6,7 @@ import { NavLink } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import { motion } from "framer-motion";
 
-function NavBar() {
-const [activePage, setActivePage] = useState("Home");
+function NavBar({activePage, handleClick, homePageButtonClass}) {
 //nav bar hide on scroll
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -15,7 +14,6 @@ const [activePage, setActivePage] = useState("Home");
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      console.log(currentScrollPos);
       const isScrolledToTop = scrollY === 0;
 
       if (window.innerWidth > 768) {
@@ -36,14 +34,6 @@ const [activePage, setActivePage] = useState("Home");
     };
   }, [prevScrollPos]);
 
-
-function handleClick(e) {
-    setActivePage(e.target.innerText);
-}
-
-
-
-
   return (
     <motion.div 
     className={`nav ${isVisible ? 'show' : ''}`}
@@ -52,20 +42,20 @@ function handleClick(e) {
     transition={{ duration: 0.3 }}
     >
         <nav className="nav-wrapper">
-            <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home" width={48} height={48}/></NavLink>
+            <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home" width={48} height={48} onClick={handleClick}/></NavLink>
             <div className="nav-right">
             <ul className="nav-buttons-wrap hide-links">
                 <li className={activePage === 'Home' ? 'active-link' : 'nav-link'}>
-                <NavLink to="/" className="nav-link" onClick={handleClick}>
+                <NavLink to="/" className="nav-link" onClick={handleClick} id="Home">
                     Home
                 </NavLink>
                 </li>
-                <li className={activePage === 'Projects' ? 'active-link' : 'nav-link'}>
+                <li className={activePage === 'Projects' || activePage === 'View my projects' ? 'active-link' : 'nav-link'} id="Projects">
                 <NavLink to="projects" className="nav-link" onClick={handleClick}>
                     Projects
                 </NavLink>
                 </li>
-                <li className={activePage === 'About' ? 'active-link' : 'nav-link'}>
+                <li className={activePage === 'About' ? 'active-link' : 'nav-link'} id="About">
                 <NavLink to="about" className="nav-link" onClick={handleClick}>
                     About
                 </NavLink>
