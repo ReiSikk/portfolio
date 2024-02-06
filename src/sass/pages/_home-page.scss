@@ -30,7 +30,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    padding: 7.5rem 0rem 2.5rem 0rem;
+    padding: 5.5rem 0rem 2.5rem 0rem;
     border-bottom: $border;
     .info-left {
         max-width: 66ch;
@@ -199,6 +199,7 @@ h1 {
   @media only screen and (min-width:580px) {
     .hero-info {
         flex-direction: row;
+        padding: 7.5rem 0rem 2.5rem 0rem;
         .info-right {
             padding-left: 2.5rem;   
             border-left: $border;
