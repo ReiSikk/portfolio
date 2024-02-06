@@ -1,6 +1,15 @@
 h1 {
     font-family: $h1-font;
 }
+.hero-text > h1 {
+    font-weight: 500;
+    font-family: $h1-medium;
+    color: $darkgrey;
+    span {
+      color: $black;
+    }
+  }
+
 .hero-media {
     margin-left: auto;
     margin-right: 2rem;
@@ -25,6 +34,15 @@ h1 {
     border-bottom: $border;
     .info-left {
         max-width: 66ch;
+        h4 {
+            font-family: $h1-medium;
+            font-weight: 500;
+            color: $darkgrey;
+            span {
+                color: $black;
+                font-family: $h1-font;
+            }
+        }
     }
     .info-right {
         min-width: 33vw;
@@ -59,6 +77,7 @@ h1 {
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 1200px;
     min-height: 100px;
     border-radius: 100px;
     transition: all 0.3s ease;

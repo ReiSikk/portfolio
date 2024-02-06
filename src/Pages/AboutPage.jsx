@@ -8,7 +8,7 @@ function AboutPage() {
       <div className="header-wrapper">
         <div className="about-left">
           <h1>About me</h1>
-          <h2 className="h4-style">I’m a recent graduate of the KEA Multimedia Design AP degree and in August of 2023 I started the Web Development BA degree at Copenhagen Business Academy.</h2>
+          <h2 className="h4-style">I’m a recent graduate of the KEA Multimedia Design AP degree and in August of 2023 I started the Web Development PBA degree at Copenhagen Business Academy.</h2>
         </div>
         <div className="about-img">
           <img src={reiphoto} alt="black and white illustration of Rei" />
