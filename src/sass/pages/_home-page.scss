@@ -1,6 +1,9 @@
 h1 {
     font-family: $h1-font;
 }
+
+$info_header_padding: 1rem;
+
 .hero-text > h1 {
     font-weight: 500;
     font-family: $h1-medium;
@@ -24,6 +27,7 @@ h1 {
 }
 .hero-wrapper {
     padding-top: 3.5rem;
+    min-height: 33lvh;
 }
 .hero-info {
     display: flex;
@@ -79,21 +83,16 @@ h1 {
     width: 100%;
     max-width: 1200px;
     min-height: 100px;
-    border-radius: 100px;
     transition: all 0.3s ease;
-    margin: 3rem auto;
-    
-        text-align: center;
-        text-transform: uppercase;
-        font-weight: bold;
-        font-family: $h1-font;
-        font-size: clamp(3rem, 2.5015rem + 2.454vw, 4.25rem);
-        color: $black;
-        transition: all 0.3s ease;
-        padding: 1.75rem 2.75rem;
-        border-radius: 200px;
-        border: 1.5px solid $black;
-        a {
+    margin: 5rem auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $h1-font;
+    font-size: clamp(3rem, 2.5015rem + 2.454vw, 4.25rem);
+    color: $black;
+    transition: all 0.2s;
+    a {
             transition: all 0.3s ease;
         }
 
@@ -114,22 +113,13 @@ h1 {
   }
 
 
-.cta:hover {
-        background: $black;
-        text-decoration: none;
-        color: $white;
-        box-shadow: 0 5px 32px rgba(0, 0, 0, 0.35);
-        border: 1.5px solid transparent;
+.cta {
+    a:hover {
+        color: $black;
         cursor: pointer;
-  
-    span {
-        img {
-                filter: invert(1);
-            }
-        }
-        .view-projects {
-            gap: 1rem;
-        }
+        transform: translateY(-5px);
+    }
+
 }
 
 
@@ -165,11 +155,36 @@ h1 {
         p:first-of-type {
             padding-bottom: 0.25rem;
         }
+        h5 {
+            padding-bottom: $info_header_padding;
+            @media(min-width:1980px) {
+                padding-bottom: 1.5rem;
+              }
+              @media(min-width:2440px) {
+                padding-bottom: 1.75rem;
+              }
+              @media(min-width:3200px) {
+                padding-bottom: 2rem;
+              }
+        }
+        
      
     }
     .info-section-upper-left {
         max-width: 66ch;
         padding-right: 1.5rem;
+        h5 {
+            padding-bottom: $info_header_padding;
+            @media(min-width:1980px) {
+                padding-bottom: 1.5rem;
+              }
+              @media(min-width:2440px) {
+                padding-bottom: 1.75rem;
+              }
+              @media(min-width:3200px) {
+                padding-bottom: 2rem;
+              }
+        }
     }
   }
   .linkedin-btn {
@@ -191,7 +206,6 @@ h1 {
   @media only screen and (max-width: 780px) {
         .cta {
             font-size: clamp(2rem, 1.6364rem + 1.2121vw, 2.5rem);
-            padding: 1.25rem 0rem;
         }
 
 }
@@ -220,6 +234,18 @@ h1 {
     }
     .info-section-lower {
         padding-top: 1.5rem;
+        h5 {
+            padding-bottom: $info_header_padding;
+            @media(min-width:1980px) {
+                padding-bottom: 1.5rem;
+              }
+              @media(min-width:2440px) {
+                padding-bottom: 1.75rem;
+              }
+              @media(min-width:3200px) {
+                padding-bottom: 2rem;
+              }
+        }
     }
     .info-section-upper-right {
         border-left: $border;

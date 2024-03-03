@@ -3,6 +3,9 @@
     display: grid;
     gap: 5rem;
     min-height: 100dvh;
+    article:last-child {
+        padding-bottom: 3rem;
+    }
 }
 .img-right, .img-left {
     display: flex;
