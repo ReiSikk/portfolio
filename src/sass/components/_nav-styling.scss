@@ -41,10 +41,30 @@
         transition: all 0.15s ease;
         border: solid 1.5px transparent;
         a {
-            font-size: 1.125rem;
+            font-size: $p-sm;
+            display: contents;
+        }
+        @media(min-width:2440px) {
+        padding: 0.5rem 1rem;
+            a {
+                font-size: $p-base;
+            }
+        }
+        @media(min-width:3200px) {
+            padding: 0.6rem 1.2rem;
+            a {
+                font-size: $p-md;
+            }
+        }
+        @media(min-width:4000px) {
+            padding: 0.7rem 1.4rem;
+           a {
+               font-size: $p-lg;
+           }
         }
         
     }
+ 
     li:active:not(:last-child) {
         background: $black;
         color: $white;

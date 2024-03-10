@@ -3,6 +3,9 @@
     display: grid;
     gap: 5rem;
     min-height: 100dvh;
+    @media (min-width: 2440px) {
+        gap: 7.5dvh;
+    }
     article:last-child {
         padding-bottom: 3rem;
     }

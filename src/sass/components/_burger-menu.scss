@@ -151,6 +151,14 @@
   .social-btn a img  {
     height: 39px;
     width: 39px;
+    @media (min-width: 1980px) {
+      height: 48px;
+      width: 48px;
+    }
+    @media (min-width: 2440px) {
+      height: 57px;
+      width: 57px;
+    }
   }
   .menu-bottom {
     display: flex;
