@@ -5,8 +5,16 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import { motion } from "framer-motion";
+import LanguageSelector from "./LanguageSelector";
+import { useTranslation } from "react-i18next";
+
+
 
 function NavBar({activePage, handleClick, homePageButtonClass}) {
+//translation
+ const {t} = useTranslation();
+ const navBar = t("navBar");
+
 //nav bar hide on scroll
   const [isVisible, setIsVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -47,24 +55,28 @@ function NavBar({activePage, handleClick, homePageButtonClass}) {
             <ul className="nav-buttons-wrap hide-links">
                 <li className={activePage === 'Home' ? 'active-link' : 'nav-link'}>
                 <NavLink to="/" className="nav-link" onClick={handleClick} id="Home">
-                    Home
+                    {navBar.home}
                 </NavLink>
                 </li>
                 <li className={activePage === 'Projects' || activePage === 'View my projects' ? 'active-link' : 'nav-link'} id="Projects">
                 <NavLink to="projects" className="nav-link" onClick={handleClick}>
-                    Projects
+                    {navBar.projects}
                 </NavLink>
                 </li>
                 <li className={activePage === 'About' ? 'active-link' : 'nav-link'} id="About">
                 <NavLink to="about" className="nav-link" onClick={handleClick}>
-                    About
+                    {navBar.about}
                 </NavLink>
                 </li>
-                    <li className="social-btn hide-mobile">
-                        <a target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/rei-sikk-a642b9218/">
-                          <img src={linkedinLogo} alt="LinkedIn" />
-                       </a>
-                   </li>
+                <li>
+                  <LanguageSelector />
+                </li>
+                <li className="social-btn hide-mobile">
+                     <a target='_blank' rel='noopener noreferrer' href="https://www.linkedin.com/in/rei-sikk-a642b9218/">
+                       <img src={linkedinLogo} alt="LinkedIn" />
+                    </a>
+                </li>
+                
             </ul>
               
                 <BurgerMenu />

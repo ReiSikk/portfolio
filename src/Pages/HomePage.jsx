@@ -4,10 +4,12 @@ import linkedinLogo from "../media/linkedin.svg";
 import githublogo from "../media/github.svg";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 
 
-function HomePage({activePage, handleClick}) {    
+function HomePage({activePage, handleClick}) {
+    const {t} = useTranslation();
   return (
     <>
     <header>
@@ -65,7 +67,7 @@ function HomePage({activePage, handleClick}) {
             </section>
     </main>
     <div className="cta">
-        <Link to="projects" className="view-projects" id="Projects" onClick={handleClick}>View my projects</Link>     
+        <Link to="projects" className="view-projects" id="Projects" onClick={handleClick}>{t("viewProjects")}</Link>     
     </div>
 
     </>

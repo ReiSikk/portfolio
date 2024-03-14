@@ -1,10 +1,6 @@
 import { React, useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import arrow from '../media/arrowup.svg'
-import hogwarts from '../media/hogwartsmock.webp'
-import cphstays from '../media/cphstays.webp'
-import foofest from '../media/foofest-mock.webp'
-import portfolio from '../media/portfolio1.webp'
 
 function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, projectUrl, projectGithub, projectTechStack, cssClass}) {
   const [projImg, setProjImg] = useState([]);
@@ -18,13 +14,10 @@ function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, 
   
         // Extract the array of images and their source URLs
         const images = jsonData.map(image => image.source_url);
-        console.log(images, "images")
-
   
         // Update the state with the fetched image URLs
         setProjImg(images);
         setImageUrls(images);
-        /* searchParams.set('images', imagesString); */
       } catch (error) {
         console.error('Error fetching image data:', error);
       }
