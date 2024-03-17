@@ -53,17 +53,17 @@ function NavBar({activePage, handleClick, homePageButtonClass}) {
             <NavLink to="/" className="logo"><img src={logo} alt="link to homepage" title="Home" width={48} height={48} onClick={handleClick}/></NavLink>
             <div className="nav-right">
             <ul className="nav-buttons-wrap hide-links">
-                <li className={activePage === 'Home' ? 'active-link' : 'nav-link'}>
+                <li className={activePage === 'Home' || activePage === 'Kodu' ? 'active-link' : 'nav-link'}>
                 <NavLink to="/" className="nav-link" onClick={handleClick} id="Home">
                     {navBar.home}
                 </NavLink>
                 </li>
-                <li className={activePage === 'Projects' || activePage === 'View my projects' ? 'active-link' : 'nav-link'} id="Projects">
+                <li className={activePage === 'Projects' || activePage === 'View my projects' || activePage === 'Projektid' || activePage === 'Vaata minu projekte' ? 'active-link' : 'nav-link'} id="Projects">
                 <NavLink to="projects" className="nav-link" onClick={handleClick}>
                     {navBar.projects}
                 </NavLink>
                 </li>
-                <li className={activePage === 'About' ? 'active-link' : 'nav-link'} id="About">
+                <li className={activePage === 'About' || activePage === 'Minust' ? 'active-link' : 'nav-link'} id="About">
                 <NavLink to="about" className="nav-link" onClick={handleClick}>
                     {navBar.about}
                 </NavLink>

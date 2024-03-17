@@ -7,6 +7,7 @@ import portfolio from '../media/portfolio1.webp'
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react";
 import ProjectCard from '../Components/ProjectCard'
+import { useTranslation } from "react-i18next";
 
 
 
@@ -32,22 +33,23 @@ function ProjectsPage() {
     fetchData();
   }, []);
 
+  const {t} = useTranslation();
+  const {projectsHeading} = t("projectsPage");
 
   return (
     <>
     <header className='projects-header'>
-        <h1>Projects</h1>
+        <h1>{projectsHeading}</h1>
         <h2 className="h4-style">UI / UX / Web Development</h2>
     </header>
     <main>
         <section className="projects-grid">
           {projects &&
            (projects.map((project, index) => {
-            console.log(project, "project objects");
             return (
 
                 <ProjectCard 
-                  key={project.id}
+                  key={index}
                   uniqueId={project.id}
                   project={project}
                   projectTitle={project.title.rendered}
