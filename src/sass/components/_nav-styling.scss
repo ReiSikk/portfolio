@@ -1,0 +1,121 @@
+
+.nav-wrapper {
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 1.25rem;
+    margin: 0 auto;
+}
+.nav {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav.show {
+    opacity: 1;
+    transform: translateY(0);
+    background: $white;
+    border-bottom: $border;
+  }
+  
+@media only screen and (min-width:1080px) {
+    .nav-wrapper {
+        padding: 2.5rem 2rem;
+    }
+}
+.nav-buttons-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1.3rem;
+
+    li {
+        padding:0.35rem 0.7rem;
+        border-radius: 100px;
+        transition: all 0.15s ease;
+        border: solid 1.5px transparent;
+        a {
+            font-size: $p-sm;
+            display: contents;
+        }
+        @media(min-width:2440px) {
+        padding: 0.5rem 1rem;
+            a {
+                font-size: $p-base;
+            }
+        }
+        @media(min-width:3200px) {
+            padding: 0.6rem 1.2rem;
+            a {
+                font-size: $p-md;
+            }
+        }
+        @media(min-width:4000px) {
+            padding: 0.7rem 1.4rem;
+           a {
+               font-size: $p-lg;
+           }
+        }
+        
+    }
+ 
+    li:active:not(:last-child) {
+        background: $black;
+        color: $white;
+    }
+}
+.hide-mobile {
+    display: none;
+}
+.hide-links {
+    display: none;
+}
+.active-link {
+    border: 1.5px solid $black !important;
+    border-radius: 200px;
+  }
+
+.logo {
+    img {
+        border-radius: 4px;
+    }
+}
+@media only screen and (min-width:768px) {
+    .hide-links {
+        display: flex;
+    }
+}
+@media only screen and (min-width:480px) {
+    .hide-mobile {
+        display: flex;
+    }
+}
+
+
+.language-select {
+    background-color: $white;
+    color:$black;
+    font-family: $p-font;
+    border: 1px solid #ced4da; 
+    border-radius: 0.25rem; 
+    padding: 0.375rem 0.75rem 0.375rem 0.75rem; 
+    font-size: 1rem; 
+    line-height: 1.5; 
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .language-select:hover {
+    border: 1px solid $black;
+
+  }
+  .language-option {
+    background-color: #f8f9fa; /* change as needed */
+    color: #495057; /* change as needed */
+  }

@@ -1,0 +1,189 @@
+.projects-grid {
+    padding-top: 5rem;
+    display: grid;
+    gap: 5rem;
+    min-height: 100dvh;
+    @media (min-width: 2440px) {
+        gap: 7.5dvh;
+    }
+    article:last-child {
+        padding-bottom: 3rem;
+    }
+}
+.img-right, .img-left {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    justify-content: space-between;
+    border-bottom: $border;
+    
+    img {
+        height: auto;
+        width: 100%;
+        object-fit: cover;
+        max-width: 1250px;
+    }
+}
+.img-left {
+    display: flex;
+    align-items: flex-start; 
+  }
+  
+  .img-left .article-info {
+    flex: 1; 
+    margin-left: 2rem; 
+  }
+
+
+.img-right {
+    flex-direction: row-reverse;
+}
+.img-left {
+    flex-direction: row;
+}
+label {
+    font-family: $p-font;
+    font-size: 0.9rem;
+}
+.labels-cont {
+    padding: 0.5rem 0rem 1rem 0rem;
+
+}
+.label {
+    padding: 0.3rem 0.6rem;
+    background: $grey;
+    border-radius: 50px;
+}
+.project-desc {
+    padding: 0rem 0rem 1rem 0rem;
+}
+.project-title {
+    padding: 0rem 0rem 0.5rem 0rem;
+}
+.article-left, .article-right, .article-info {
+    max-width: 49%;
+    text-align: left;
+
+}
+
+.article-links {
+    padding: 0rem 0rem 2rem 0rem;
+    display: flex;
+    gap: 2.5rem;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+        border-radius: 100px;
+        transition: all 0.3s ease;
+        text-decoration: underline;
+    }
+    span {
+        padding-left: 0.5rem;
+        transition: all 0.3s ease;
+        min-width: 16px;
+        min-height: 16px;
+        height: auto;
+        width: auto;
+        max-height: 24px;
+        max-width: 24px;
+    }
+    a:hover {
+        background: $skyblue;
+        text-decoration: none;
+    }
+}
+.arrow-up {
+    max-height: 24px;
+    width: auto;
+    aspect-ratio: 1/1;
+}
+#project_vid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.2s ease; /* Add a smooth transition effect */
+}
+#project_img {
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    max-width: 1280px;
+}
+#project_img:hover, #project_vid:hover {
+    cursor: url(../media/hovercursor.png) 50 50,auto;
+    transition: all 0.2s ease;
+} 
+.condensed {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.projects-header {
+    margin-top: 1rem;
+}
+#labels-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+#tech-labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0.75rem;
+    column-gap: 0.75rem;
+    width: 100%;
+}
+.tech-label {
+    background: $skyblue;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    min-width: fit-content;
+}
+#tech-stack {
+    padding: 0rem 0rem 1rem 0rem;
+    width: 100%;
+    p {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    .img-right, .img-left {
+        flex-direction: column;
+        div {
+            width: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+    .article-left, .article-right, .article-info {
+        max-width: 100%;
+    }
+    .img-left .article-info {
+        flex: 1; 
+        margin-left: 0rem; 
+      }
+      .img-left {
+        align-items: flex-end;
+      }
+
+}
+@media only screen and (max-width:480px) {
+    .article-links {
+        a {
+            padding: 0rem;
+        }
+        a:hover {
+            background: none;
+            text-decoration: none;
+        }
+        a:active {
+            transform: scale(0.9);
+        }
+    }
+}
