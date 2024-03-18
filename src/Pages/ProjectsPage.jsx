@@ -34,13 +34,13 @@ function ProjectsPage() {
   }, []);
 
   const {t} = useTranslation();
-  const {projectsHeading} = t("projectsPage");
+  const { projectsHeading, subheader } = t("projectsPage");
 
   return (
     <>
     <header className='projects-header'>
         <h1>{projectsHeading}</h1>
-        <h2 className="h4-style">UI / UX / Web Development</h2>
+        <h2 className="h4-style">{subheader}</h2>
     </header>
     <main>
         <section className="projects-grid">

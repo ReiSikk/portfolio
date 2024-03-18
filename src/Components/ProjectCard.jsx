@@ -1,10 +1,38 @@
 import { React, useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import arrow from '../media/arrowup.svg'
+import { useTranslation } from "react-i18next";
 
 function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, projectUrl, projectGithub, projectTechStack, cssClass}) {
   const [projImg, setProjImg] = useState([]);
   const [imageUrls, setImageUrls] = useState([]);
+
+  const {t} = useTranslation();
+  const { labelPersonal, labelSchool, liveDemo, projectEha, ehaDescription, projectTravelDest, travelDestDescription, projectComwell, comwellDescription, projectHogwarts, hogwartsDescription, projectCphStays, cphStaysDescription, projectFoofest, foofestDescription } = t("projectsPage");
+
+  // Translate the project label
+  const labelTranslations = {
+    "Personal project": labelPersonal,
+    "School project": labelSchool
+  };
+  
+  const titleTranslations = {
+    "Landing page for Eha": { title: projectEha, description: ehaDescription },
+    "Travel Destinations": { title: projectTravelDest, description: travelDestDescription },
+    "Comwell hotels": { title: projectComwell, description: comwellDescription },
+    "Hogwarts admin site": { title: projectHogwarts, description: hogwartsDescription },
+    "Website for CPHStays": { title: projectCphStays, description: cphStaysDescription },
+    "Festival companion app": { title: projectFoofest, description: foofestDescription }
+
+  };
+  
+  projectLabel = labelTranslations[projectLabel] || projectLabel;
+  const titleTranslation = titleTranslations[projectTitle];
+  
+  if (titleTranslation) {
+    projectTitle = titleTranslation.title || projectTitle;
+    projectDescription = titleTranslation.description || projectDescription;
+  }
 
   useEffect(() => {
     const fetchData = async () => {
