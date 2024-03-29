@@ -1,14 +1,38 @@
 import { React, useEffect, useState } from 'react'
 import { motion } from "framer-motion"
 import arrow from '../media/arrowup.svg'
-import hogwarts from '../media/hogwartsmock.webp'
-import cphstays from '../media/cphstays.webp'
-import foofest from '../media/foofest-mock.webp'
-import portfolio from '../media/portfolio1.webp'
+import { useTranslation } from "react-i18next";
 
 function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, projectUrl, projectGithub, projectTechStack, cssClass}) {
   const [projImg, setProjImg] = useState([]);
   const [imageUrls, setImageUrls] = useState([]);
+
+  const {t} = useTranslation();
+  const { labelPersonal, labelSchool, liveDemo, projectEha, ehaDescription, projectTravelDest, travelDestDescription, projectComwell, comwellDescription, projectHogwarts, hogwartsDescription, projectCphStays, cphStaysDescription, projectFoofest, foofestDescription } = t("projectsPage");
+
+  // Translate the project label
+  const labelTranslations = {
+    "Personal project": labelPersonal,
+    "School project": labelSchool
+  };
+  
+  const titleTranslations = {
+    "Landing page for Eha": { title: projectEha, description: ehaDescription },
+    "Travel destinations": { title: projectTravelDest, description: travelDestDescription },
+    "Comwell hotels": { title: projectComwell, description: comwellDescription },
+    "Hogwarts admin site": { title: projectHogwarts, description: hogwartsDescription },
+    "Website for CPHStays": { title: projectCphStays, description: cphStaysDescription },
+    "Festival companion app": { title: projectFoofest, description: foofestDescription }
+
+  };
+  
+  projectLabel = labelTranslations[projectLabel] || projectLabel;
+  const titleTranslation = titleTranslations[projectTitle];
+  
+  if (titleTranslation) {
+    projectTitle = titleTranslation.title || projectTitle;
+    projectDescription = titleTranslation.description || projectDescription;
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -18,13 +42,10 @@ function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, 
   
         // Extract the array of images and their source URLs
         const images = jsonData.map(image => image.source_url);
-        console.log(images, "images")
-
   
         // Update the state with the fetched image URLs
         setProjImg(images);
         setImageUrls(images);
-        /* searchParams.set('images', imagesString); */
       } catch (error) {
         console.error('Error fetching image data:', error);
       }
@@ -34,7 +55,6 @@ function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, 
   }, [setImageUrls, uniqueId]);
 
   let techStack = projectTechStack.split(",");
-  console.log(techStack)
   return (
     <>
       <motion.article
@@ -65,14 +85,10 @@ function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, 
                            <p className="project-desc">
                            {projectDescription}
                            </p>
-                         {/*   <div className="article-links">
-                                <a href={projectUrl} target='_blank' rel='noreferrer'>Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
-                                <a href={projectGithub} target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
-                           </div> */}
                            <div className="article-links">
                              {projectUrl && (
                                <a href={projectUrl} target='_blank' rel='noreferrer'>
-                                 Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span>
+                                {liveDemo}<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span>
                                </a>
                              )}
                              <a href={projectGithub} target='_blank' rel='noreferrer'>

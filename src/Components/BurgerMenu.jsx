@@ -2,36 +2,38 @@ import { useState } from 'react';
 import linkedinLogo from "../media/linkedIn.svg";
 import githublogo from "../media/github.svg";
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const BurgerMenu = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
     setMenuOpen((prevOpen) => !prevOpen);
-
   }
+
+  const {t} = useTranslation();
+  const { menu, home, projects, about, close } = t("burgerMenu");
 
   return (
     <div className="burger-menu-container hide-desktop">
       <li className={`menu-btn ${isMenuOpen ? 'open' : ''}`} onClick={handleMenuToggle}>
-        Menu
+        {menu}
       </li>
       <div className={`overlay ${isMenuOpen ? 'show' : 'hide'}`}></div>
       <div className={`menu-content ${isMenuOpen ? 'show' : 'hide'}`}>
-        {/* Place your menu items or links here */}
                 <div className="close-btn-container">
-                    <button className='menu-btn' onClick={handleMenuToggle}>Close</button>
+                    <button className='menu-btn' onClick={handleMenuToggle}>{close}</button>
                 </div>
             <div className="burger-links">
                 <ul>
                   <li>
-                    <Link to="/" className='burger-link' onClick={handleMenuToggle}>Home</Link>
+                    <Link to="/" className='burger-link' onClick={handleMenuToggle}>{home}</Link>
                   </li>
                   <li>
-                    <Link to="about" className='burger-link' onClick={handleMenuToggle}>About</Link>
+                    <Link to="about" className='burger-link' onClick={handleMenuToggle}>{about}</Link>
                   </li>
                   <li>
-                    <Link to="projects" className='burger-link' onClick={handleMenuToggle}>Projects</Link>
+                    <Link to="projects" className='burger-link' onClick={handleMenuToggle}>{projects}</Link>
                   </li>
                 </ul>
             </div>
