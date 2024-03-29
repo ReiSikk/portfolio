@@ -78,13 +78,20 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     github2: "Here it is.",
                     githubCTA: "Github profile",
 
+                },
+                burgerMenu: {
+                    menu: "Menu",
+                    home: "Home",
+                    projects: "Projects",
+                    about: "About",
+                    close: "Close",
                 }
             }
         },
         ee: {
             translation: {
                 navBar: {
-                    home: "Kodu",
+                    home: "Avaleht",
                     projects: "Projektid",
                     about: "Minust",
                 },
@@ -98,7 +105,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     line1: "Õpin veebiarendajaks",
                     part1: "Lõputult",
                     part2: "uudishimulik",
-                    part3: ", alati",
+                    part3: ", pidevalt",
                     part4: " end täiendamas",
                     im: "Ma olen",
                     reiSikk: " Rei Sikk",
@@ -122,7 +129,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     projectEha: "Maandumisleht ettevõttele Eha",
                     ehaDescription: "Klient töötab turismi ja heaolu valdkonnas ning minu eesmärk oli luua neile maandumisleht. Kasutades oma front-end alaseid oskusi, muutsin Figma disaini eestetiliselt puhtaks ja responsiivseks veebisaidiks, mille eesmärk on pakkuda kasutajatele ülevaadet ettevõtte pakutavast kontseptsioonist ning võimalust registreeruda e-maili uudiskirja. Töötasin tihedas koostöös disaineriga, tagamaks selgust mikrointeraktsioonide, disainielementide ja üldise veebisaidi käitumise ning funktsionaalsuse osas. Kasutades oma tehnilisi oskusi, suutsin ette nähtud lühikese aja jooksul luua professionaalse ja kaasahaarava veebikogemuse.",
 
-                    projectTravelDest: "Travel destinations app",
+                    projectTravelDest: "Travel destinations",
                     travelDestDescription: "Ülesande eesmärk oli saada kogemusi fullstack-rakenduse loomisel, kasutades Node.js-i / Node.js raamistiku Express, MongoDB-d ning ehitades frontend-i JavaScripti, HTML-i ja CSS-ga. Tulemus on domeen reisisihtkohtadest - eelnevate puhkuste logiraamat. Tagakülg on API, mis on loodud Node.js-i, Expressi, Mongoose'i ja MongoDB abil ning saadab andmeid frontendi kasutadesJSON-i. Veebisaidil saavad kasutajad lisada oma reisisihtkohti nimekirja ning luua konto ja sisse logida, et värskendada või kustutada oma eelnevaid sissekandeid.",
 
                     projectComwell: "Comwell hotellid",
@@ -135,23 +142,30 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     cphStaysDescription: "Multimeedia disaini neljanda semestri projekt koostöös väikse Kopenhaagenis tegutseva majutusettevõttega. Projekt tehti kaheliikmelises tiimis kuid suurem enamus koodi ja kogu tehnline lahendus on minu kätetöö. Pakkusime kliendile välja lahenduse, mis koosneb veebilehest, mis kasutab WordPressi CMS-ina, kus kasutaja saab näha saadavalolevaid üürikortereid ja saata päringu nende kohta.",
 
                     projectFoofest: "Festival companion app",
-                    foofestDescription: "Foofestivali “app” oli Multimeedia disaini kolmanda semestri Frontend disaini valikaine eksamiprojekt. Tegu oli grupiprojektiga ja ülesandeks oli luua lehekülg piletiostuks ja festivali “app” väljamõeldud festivali jaoks. Antud veebileht on mõeldud inimestele, kes on juba pileti ostnud. Lehel saavad kasutajad kursis olla festivali ajakavaga, lisada laive enda lemmikute listi ja leida täpsustavat infot festivali praktiliste küsimuste kohta.”"
+                    foofestDescription: "Foofestivali “app” oli Multimeedia disaini kolmanda semestri Frontend disaini valikaine eksamiprojekt. Tegu oli grupiprojektiga ja ülesandeks oli luua lehekülg piletiostuks ja festivali “app” väljamõeldud festivali jaoks. Antud veebileht on mõeldud inimestele, kes on juba pileti ostnud. Lehel saavad kasutajad kursis olla festivali ajakavaga, lisada laive enda lemmikute listi ja leida täpsustavat infot festivali praktiliste küsimuste kohta.”",
                 },
                 aboutPage: {
                     aboutMe: "Minust",
                     aboutMeText: "Ma olen lõpetanud KEA multimeedia disaini AP kraadi (120ECTS) ja 2023. aasta augustis alustasin veebiarenduse eriala bakalaureuseõppekava Copenhagen Business Academy-s.",
-                    aboutBody: "In the summer of 2021, after completing military service in my home country of Estonia I moved to Copenhagen to realize my goal of living abroad and pursue my passion for design and tech by studying Multimedia Design at KEA. I’ve long been interested in design and what makes design good, but during my studies I realised I am also captivated about the technical side of bringing designs into life with code. Coding is something that is very challenging and frustrating at times but the sense of accomplishment and joy you get when solving problems is so rewarding and motivating. I find that in this field the possibilities are endless and I’m motivated by the thought that good design and technological solutions can improve the lives of so many people.",
+                    aboutBody: "2021 aasta suvel, pärast ajateenistuse läbimist, kolisin Taani Kopenhaagenisse, et realiseerida oma unistus elada välismaal ja järgida oma kirge disaini ja teholoogia vastu, õppides multimeedia disaini KEA-s. Tänu isale juba noorena tärganud disainihuvi kandus üks hetk üle veebidisainile ning seetõttu tunduski multimeedia just see, mida ma tahan õppida. Õppekava üheks suureks fookuseks oligi veebidisain, kuid õpingute käigus mõistsin, et mind paelub ka ühe disaini elluviimise protsess läbi koodi kirjutamise. Programmeerimine on midagi, mis on keeruline ja mõnikord ka frustreeriv, kuid erinevate probleemide lahendamisest saadav saavutustunne, teadmised ja rõõm on miski, mis motiveerib edasi arenema pidevalt. Leian, et selles valdkonnas on võimalused lõputud ja mind motiveerib mõte, et heal disainil ja tehnoloogilistel lahendustel on võime parandada nii paljude inimeste elu - kasvõi natukene iga päev.",
                     getInTouch: "Võta ühendust",
-                    email1: "On sul projekt või võimalus?",
+                    email1: "On teil mõni projekt või võimalus?",
                     email2: "Räägime.",
                     emailCTA: "Saada e-mail",
                     cv1: "Soovite näha minu CV-d?",
-                    cv2: "Palun väga.",
+                    cv2: "Aga palun.",
                     cvCTA: "Minu CV",
                     github1: "Tahate näha minu Githubi profiili?",
                     github2: "Siin see on.",
                     githubCTA: "Githubi profiil",
 
+                },
+                burgerMenu: {
+                    menu: "Menüü",
+                    home: "Avaleht",
+                    projects: "Projektid",
+                    about: "Minust",
+                    close: "Sulge",
                 }
             }
         }

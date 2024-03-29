@@ -16,6 +16,13 @@ $h1-xxxl: clamp(9.16rem, 5.4vw + 7.89rem, 12.21rem);
 //h2
 
 //h3
+$h3-sm: clamp(1.06rem, 0.47vw + 0.94rem, 1.31rem);
+$h3-base: clamp(1.4rem, 0.63vw + 1.25rem, 1.75rem);
+$h3-md: clamp(1.87rem, 0.85vw + 1.66rem, 2.33rem);
+$h3-lg: clamp(2.48rem, 1.14vw + 2.2rem, 3.11rem);
+$h3-xl: clamp(3.3rem, 1.53vw + 2.92rem, 4.15rem);
+$h3-xxl: clamp(4.39rem, 2.06vw + 3.88rem, 5.53rem);
+$h3-xxxl: clamp(5.84rem, 2.77vw + 5.15rem, 7.37rem);
 
 //h4
 $h4-sm: clamp(0.9rem, 0.53vw + 0.78rem, 1.2rem);
@@ -28,13 +35,6 @@ $h4-xxxl: clamp(3.43rem, 2.02vw + 2.96rem, 4.58rem);
 
 
 //p
-/* $p-sm: clamp(0.9rem, 0vw + 0.9rem, 0.9rem);
-$p-base: clamp(1.13rem, 0vw + 1.13rem, 1.13rem);
-$p-md: clamp(1.41rem, 0vw + 1.41rem, 1.41rem);
-$p-lg: clamp(1.76rem, 0vw + 1.76rem, 1.76rem);
-$p-xl: clamp(2.2rem, 0vw + 2.2rem, 2.2rem);
-$p-xxl: clamp(2.75rem, 0vw + 2.75rem, 2.75rem);
-$p-xxxl: clamp(3.43rem, 0vw + 3.43rem, 3.43rem); */
 $p-sm: clamp(0.9rem, 0.3vw + 0.83rem, 1.2rem);
 $p-base: clamp(1.13rem, 0.37vw + 1.04rem, 1.5rem);
 $p-md: clamp(1.41rem, 0.47vw + 1.3rem, 1.88rem);
@@ -57,7 +57,7 @@ $p-xxxl: clamp(3.43rem, 1.14vw + 3.17rem, 4.58rem);
     font-family: $p-font;
   }
   p {
-   font-size: $p-base;
+   font-size: $p-sm;
     font-family: $p-font;
     font-weight: 400;
     max-width: 62ch;
@@ -74,7 +74,7 @@ $p-xxxl: clamp(3.43rem, 1.14vw + 3.17rem, 4.58rem);
   }
   @media(min-width:4800px) {
     p {
-      font-size: $p-lg;
+      font-size: $p-md;
     }
   }
   
@@ -99,6 +99,7 @@ $p-xxxl: clamp(3.43rem, 1.14vw + 3.17rem, 4.58rem);
   h1 {
     font-size: $h1-base;
   }
+
   .h1-style {
     font-size: clamp(3rem, 1.675vw + 2.66rem, 4rem);
   }
@@ -146,23 +147,24 @@ $p-xxxl: clamp(3.43rem, 1.14vw + 3.17rem, 4.58rem);
     line-height: clamp(2.775rem, 0.796vw + 2.613rem, 3.25rem);
   }
   h3 {
-    font-size: clamp(1.375rem, 0.628vw + 1.247rem, 1.75rem);
+    font-size: $h3-base;
     line-height: clamp(2.063rem, 0.356vw + 1.99rem, 2.275rem);
   }
   .h3-style {
-    font-size: clamp(1.375rem, 0.628vw + 1.247rem, 1.75rem);
+    font-size: $h3-base;
     line-height: clamp(2.063rem, 0.356vw + 1.99rem, 2.275rem);
   }
   h4 {
-   /*  font-size: clamp(1.125rem, 0.628vw + 0.997rem, 1.5rem);
-    line-height: clamp(1.688rem, 0.44vw + 1.598rem, 1.95rem); */
     font-size: $h4-base;
   }
   .h4-style {
-    font-size: clamp(1.125rem, 0.628vw + 0.997rem, 1.5rem);
+    font-size: $h4-base;
     line-height: clamp(1.688rem, 0.44vw + 1.598rem, 1.95rem);
   }
   @media(min-width:1960px) {
+    h3, .h3-style {
+      font-size: $h3-md;
+    }
     h4 {
       font-size: $h4-md;
     }
@@ -171,6 +173,9 @@ $p-xxxl: clamp(3.43rem, 1.14vw + 3.17rem, 4.58rem);
     }
   }
   @media(min-width:2440px) {
+    h3, .h3-style {
+      font-size: $h3-lg;
+    }
     h4 {
       font-size: $h4-lg;
     }

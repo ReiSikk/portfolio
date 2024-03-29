@@ -60,6 +60,11 @@ label {
 .project-title {
     padding: 0rem 0rem 0.5rem 0rem;
 }
+@media(min-width: 2440px) {
+    .project-title {
+        padding: 0rem 0rem 1.25rem 0rem;
+    }
+}
 .article-left, .article-right, .article-info {
     max-width: 49%;
     text-align: left;

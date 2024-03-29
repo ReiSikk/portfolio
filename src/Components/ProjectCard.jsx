@@ -18,7 +18,7 @@ function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, 
   
   const titleTranslations = {
     "Landing page for Eha": { title: projectEha, description: ehaDescription },
-    "Travel Destinations": { title: projectTravelDest, description: travelDestDescription },
+    "Travel destinations": { title: projectTravelDest, description: travelDestDescription },
     "Comwell hotels": { title: projectComwell, description: comwellDescription },
     "Hogwarts admin site": { title: projectHogwarts, description: hogwartsDescription },
     "Website for CPHStays": { title: projectCphStays, description: cphStaysDescription },
@@ -88,7 +88,7 @@ function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, 
                            <div className="article-links">
                              {projectUrl && (
                                <a href={projectUrl} target='_blank' rel='noreferrer'>
-                                 Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span>
+                                {liveDemo}<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span>
                                </a>
                              )}
                              <a href={projectGithub} target='_blank' rel='noreferrer'>
