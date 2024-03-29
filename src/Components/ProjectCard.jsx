@@ -85,10 +85,6 @@ function ProjectCard({projectTitle, projectLabel, uniqueId, projectDescription, 
                            <p className="project-desc">
                            {projectDescription}
                            </p>
-                         {/*   <div className="article-links">
-                                <a href={projectUrl} target='_blank' rel='noreferrer'>Live project<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
-                                <a href={projectGithub} target='_blank' rel='noreferrer'>Github<span><img src={arrow} alt="arrow for link element" className='arrow-up' /></span></a>
-                           </div> */}
                            <div className="article-links">
                              {projectUrl && (
                                <a href={projectUrl} target='_blank' rel='noreferrer'>

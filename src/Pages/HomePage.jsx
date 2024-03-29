@@ -1,6 +1,6 @@
 
 import arrowRight from "../media/arrow-right.svg";
-import linkedinLogo from "../media/linkedin.svg";
+import linkedinLogo from "../media/linkedIn.svg";
 import githublogo from "../media/github.svg";
 import { useEffect, useState, useContext } from "react";
 import { Link } from "react-router-dom";

@@ -234,6 +234,9 @@ $info_header_padding: 1rem;
     }
     .info-section-lower {
         padding-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         h5 {
             padding-bottom: $info_header_padding;
             @media(min-width:1980px) {
@@ -261,10 +264,5 @@ $info_header_padding: 1rem;
         }
     }
 }
-  .info-section-lower {
-    padding-top: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
+
 

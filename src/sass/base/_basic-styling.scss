@@ -63,18 +63,18 @@ $p-xxxl: clamp(3.43rem, 1.14vw + 3.17rem, 4.58rem);
     max-width: 62ch;
   }
   @media(min-width:2440px) {
-    p {
-      font-size: $p-md;
+    p,label {
+      font-size: $p-base;
     }
   }
   @media(min-width:3200px) {
     p {
-      font-size: $p-lg;
+      font-size: $p-md;
     }
   }
-  @media(min-width:4000px) {
+  @media(min-width:4800px) {
     p {
-      font-size: $p-xl;
+      font-size: $p-lg;
     }
   }
   
@@ -97,8 +97,6 @@ $p-xxxl: clamp(3.43rem, 1.14vw + 3.17rem, 4.58rem);
     font-family: $h1-font;
   }
   h1 {
-    /* font-size: clamp(3rem, 1.675vw + 2.66rem, 4rem);
-    line-height: clamp(4.5rem, 1.173vw + 4.262rem, 5.2rem); */
     font-size: $h1-base;
   }
   .h1-style {
